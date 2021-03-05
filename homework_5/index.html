@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- External Links to CSS files -->
+        <link rel="stylesheet" media="all" type="text/css" href="style.css">
+
         <title>Muddy Paws Adventure Gears</title>
     </head>
 
     <body>
         <div id="container">
             <header>
-                <h1>Muddy Paws Adventure Gears</h1>
-                <!-- Search Bar -->
-                <form>
-                    <input placeholder="What are you looking for?">
-                    <button type="submit">Search</button>
-                </form> 
+                <div class="logo">
+                    <h1><img src="images/logo.png" alt="logo" width="100">Muddy Paws Adventure Gears</h1>
+                </div>
+                <!-- Search Bar reference: "https://codepen.io/huange/pen/rbqsD" -->
+                <div class="wrap">
+                <div class="search">
+                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                        <button type="submit" class="searchButton">Search</button>
+                </div></div>
+
+                <!-- Shopping Cart -->
+                <div class="cart">
+                    <a href="cart.html"><input type="image" src="images/cart.png" alt="shopping cart icon" width="50"></a>
+                </div>
 
                 <!-- Navigation -->
                 <nav>
@@ -32,8 +43,9 @@
             <footer>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact Us</a>
-                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" ></a>
-                <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" ></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="instagram icon"></a>
+                <a href="https://youtube.com/" target="_blank"><img src="images/youtube.png" alt="youtube icon"></a>
             </footer>
         </div>
     </body>
