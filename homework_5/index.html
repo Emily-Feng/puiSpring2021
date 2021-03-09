@@ -9,33 +9,41 @@
 
     <body>
         <div id="container">
-            <header>
-                <div class="logo">
-                    <h1><img src="images/logo.png" alt="logo" width="100">Muddy Paws Adventure Gears</h1>
-                </div>
-                <!-- Search Bar reference: "https://codepen.io/huange/pen/rbqsD" -->
-                <div class="wrap">
-                <div class="search">
-                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
-                        <button type="submit" class="searchButton">Search</button>
-                </div></div>
+            <div id="top_row">
+                <img src="images/logo.png" alt="logo" class="logo">
 
+                <!-- Search Bar -->
+                <div class="searchBar">
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                    <button type="submit" class="searchButton">Search</button>
+                </div></div>
+                
                 <!-- Shopping Cart -->
-                <div class="cart">
+                <div id="top_row cart">
                     <a href="cart.html"><input type="image" src="images/cart.png" alt="shopping cart icon" width="50"></a>
                 </div>
 
                 <!-- Navigation -->
                 <nav>
+                <div id="top_row nav">
                     <a href="products.html">Harness</a>
                     <a href="products.html">Attachment</a>
                     <a href="products.html">Collar</a>
                     <a href="products.html">Backpack</a>
-
-                    <button>Browse All Products</button>
+                </div>
+                </nav>  
+                
+            </div>
+            <header>
+                
+                <div class="container">
+                    <img src="images/home.jpg" alt="hiking dog">
+                    <a href="products.html"><button class="btn">Browse All Products</button></a>         
+                </div>
                     <button>Shop Cat's</button>
                     <button>Shop Dog's</button>
-                </nav>
+                
 
             </header>
             

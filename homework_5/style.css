@@ -1,23 +1,21 @@
 /* CSS document */
 
-.header logo img {
-    float: left;
-    width: 100px;
-    height: 100px;
-    background: #555;
-  }
-  
-  .header logo h1 {
-    position: relative;
-    top: 18px;
-    left: 10px;
-  }
+#top_row{
+  border-bottom: 1px dotted #ccc;
+  padding: .5em .5em 3em .5em;
+}
 
-  .search {
-    width: 100%;
-    position: relative;
-    display: flex;
-  }
+.header logo {
+  float: left;
+  width: 5%;
+  background: #555;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
   
   .searchTerm {
     width: 100%;
@@ -30,33 +28,102 @@
     color: #9DBFAF;
   }
   
-  .searchTerm:focus{
-    color: #c4c4c4;
-  }
+.searchTerm:focus{
+  color: #c4c4c4;
+}
   
-  .searchButton {
-    width: 100px;
-    height: 36px;
-    border: 1px solid #c4c4c4;
-    background: #c4c4c4;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
-  }
+.searchButton {
+  width: 100px;
+  height: 36px;
+  border: 1px solid #c4c4c4;
+  background: #c4c4c4;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
 
-  .wrap{
-    width: 20%;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.SearchBar{
+  width: 20%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  .cart {
-      position: absolute;
-      top: 10%;
-      left: 90%;
-      transform: translate(100%, -80%);
-  }
+#top_row cart {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  transform: translate(100%, -80%);
+}
+
+#top_row nav {
+  float: left;
+}
+
+#top_row nav a {
+  text-decoration: none;
+  font-size: 1.125em;
+  font-weight: 400;
+  padding: 15px;
+  color: #000000;
+}
+
+#top_row nav a.selected{
+  background: #f6f6f6;
+  color: #bbbbbb;
+}
+
+#top_row nav a.selected:hover{
+  background: #f6f6f6;
+  color: #3F7C9D;
+}
+
+#top_row nav a:hover{
+  background: #f6f6f6;
+  color: #3F7C9D;
+}
+
+/* position the button */
+#container {
+  position: relative;
+  width: 90%;
+}
+
+/* Responisve image */
+.container img {
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+  
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #5485CFCC;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+  
+.container .btn:hover {
+  background-color: #5485CF;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
