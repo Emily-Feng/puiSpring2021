@@ -8,18 +8,22 @@
     </head>
 
     <body>
-        <div id="container">
+        <div id="wrap">
 
             <div id="top_row">
                 <!-- Logo -->
-                <img src="images/logo.png" alt="logo" class="logo">
+                <div>
+                    <img src="images/logo.png" alt="logo" class="logo">
+                </div>
+                
 
                 <!-- Search Bar Reference: https://codepen.io/huange/pen/rbqsD -->
                 <div class="searchBar">
-                <div class="search">
-                    <input type="text" class="searchTerm" placeholder="What are you looking for?">
-                    <button type="submit" class="searchButton">Search</button>
-                </div></div>
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                        <button type="submit" class="searchButton">Search</button>
+                    </div>
+                </div>
                 
                 <!-- Shopping Cart -->
                 <a href="cart.html" class="cart"><input type="image" src="images/cart.png" alt="shopping cart icon" width="50"></a>
@@ -32,35 +36,39 @@
                 <a href="products.html">Attachment</a>
                 <a href="products.html">Collar</a>
                 <a href="products.html">Backpack</a>
-            </div></nav>  
-                
-        <div id="content">
-             <div class="container">
-                <img src="images/home.jpg" alt="hiking dog">
-                <a href="products.html"><button class="btn">Browse All Products</button></a>         
             </div>
+            </nav>  
+            
+            <!-- Content -->
+            <div id="content">
+                <div class="container">
+                    <img src="images/home.jpg" alt="hiking dog">
+                    <a href="products.html"><button class="btn">Browse All Products</button></a>         
+                </div>
 
-            <div class="shop_category">
-            <div class="shop_cat">
-                <a href="products.html"><button class="btn">Shop Cat's</button></a>
+                <div class="shop_category">
+                    <div class="shop_cat">
+                        <a href="products.html"><button class="btn">Shop Cat's</button></a>
+                    </div>
+                    <div class="shop_dog">
+                        <a href="products.html"><button class="btn">Shop Dog's</button></a>
+                    </div>
+                </div>
             </div>
-            <div class="shop_dog">
-                <a href="products.html"><button class="btn">Shop Dog's</button></a>
-            </div>
-            </div>
-        </div>
            
                 
                 
 
-        <!-- Footer -->
-        <footer>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="facebook icon"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="instagram icon"></a>
-            <a href="https://youtube.com/" target="_blank"><img src="images/youtube.png" alt="youtube icon"></a>
-        </footer>
+            <!-- Footer -->
+            <footer>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="instagram icon"></a>
+                <a href="https://youtube.com/" target="_blank"><img src="images/youtube.png" alt="youtube icon"></a>
+                <div id="page">
+                    <a href="about.html">AboutUs</a>
+                    <a href="contact.html">ContactUs</a>
+                </div>
+            </footer>
         </div>
     </body>
 

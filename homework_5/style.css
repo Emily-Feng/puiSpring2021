@@ -1,8 +1,15 @@
 /* CSS document */
 
+#wrap {
+  width: 90%;
+  margin: 10px auto;
+}
+
 #top_row{
   width: 100%;
   padding: .5em .5em 3em .5em;
+  vertical-align: middle;
+  border-bottom: 1px dotted #ccc;
 }
 
 .logo {
@@ -10,12 +17,7 @@
   width: 15%;
   /* background: #555; */
   padding: .5em 1em;
-}
-
-.search {
-  width: 30%;
-  position: relative;
-  display: flex;
+  /* border: 1px solid; */
 }
   
 .searchTerm {
@@ -47,20 +49,36 @@
 
 .SearchBar{
   width: 30%;
-  position: absolute;
-  top: 80%;
+  /* position: absolute; */
+  float: right;
+  /* top: 80%;
   left: 80%;
-  transform: translate(-80%, -20%);
+  transform: translate(-80%, -20%); */
+  display: flex;
+  /* border: solid 1px; */
+}
+
+.search {
+  padding-top: 25px;
+  padding-left: 15%;
+  width: 30%;
+  position: relative;
+  display: flex;
+  /* border: solid 1px; */
 }
 
 .cart {
+  padding-top: 25px;
   position: absolute;
   top: 0%;
-  right: 10%;
+  right: 13%;
+  /* border: solid 1px; */
 }
 
 #nav {
   float: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 #nav a {
@@ -89,17 +107,12 @@
 /* position the button */
 #container {
   position: relative;
-  width: 90%;
 }
 
 /* Responisve image */
 .container img {
   width: 100%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  padding: .5em .5em 3em .5em;
+  padding: .5em .5em .5em .5em;
 }
   
 /* Style the button and place it in the middle of the container/image */
@@ -122,16 +135,8 @@
   background-color: #5485CF;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
 .shop_cat .btn {
   position: absolute;
-  top: 95%;
   left: 20%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -146,7 +151,6 @@
 
 .shop_dog .btn {
   position: absolute;
-  top: 95%;
   right: 20%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -161,4 +165,48 @@
 
 .shop_category .btn:hover {
   background-color: #0B3E5A;
+}
+
+.shop_category {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+#content{
+  float: left;
+  /* padding-bottom: 30px; */
+}
+
+footer {
+  clear: both;
+  margin: 10px;
+  color: #333333;
+  text-align: center;
+  border-top: solid 1px;
+}
+
+#page {
+  color: #000000;
+  font-size: 1.5em;
+  word-spacing: 2em;
+  padding-left; 3em;
+  padding-right: 2em;
+}
+
+footer a {
+  color: #000000;
+}
+
+footer a:visited {
+  color: black;
+}
+
+footer img {
+  width: 2.5em;
+  filter: grayscale(100%);
+  position: relative;
+  left: 40%;
+  padding-top: 2em;
+  padding-left; 2em;
+  padding-right: 2em;
 }
