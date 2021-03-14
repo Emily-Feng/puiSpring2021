@@ -204,6 +204,73 @@
   float: right;
 }
 
+#leftCol {
+  padding-top: 1em;
+  left: 0;
+}
+
+#rightCol {
+  content: "";
+  display: table;
+  clear: both;
+  position: absolute;
+  right: 35%;
+  top: 23%;
+}
+
+.btnGroupVertical {
+  display: inline-block;
+  width: 100px; 
+  float: left;
+  position: relative;
+  overflow: hidden;
+  min-height: 1px;
+  display: block;
+}
+
+.btnGroupHorizontal .btn{
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin: 1em;
+  padding: 0%;
+}
+
+.btnGroupHorizontal .btn-1{
+  width: 80px;
+  height: 40px;
+  float: left;
+  margin: 1em;
+  padding: 0%;
+}
+
+.leftCol .mainImage {
+  width: 10%;
+  padding: 8em;
+  overflow: visible;
+}
+
+#addToCart {
+  margin: 1em;
+  display: block;
+  width: 400px;
+  height: 70px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 0 0 7px var(--light) inset;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 3em;
+  margin: 0%;
+  margin-bottom: 1%;
+}
+
 footer {
   clear: both;
   margin: 10px;
@@ -238,6 +305,28 @@ footer a {
   padding-right: 2em;
   position: absolute;
   top: 112%;
+  left: 40%;
+}
+
+#aboutpage {
+  color: #000000;
+  font-size: 1.5em;
+  word-spacing: 5em;
+  padding-left: 3em;
+  padding-right: 2em;
+  position: absolute;
+  top: 177%;
+  left: 40%;
+}
+
+#detailpage {
+  color: #000000;
+  font-size: 1.5em;
+  word-spacing: 5em;
+  padding-left: 3em;
+  padding-right: 2em;
+  position: absolute;
+  top: 95%;
   left: 40%;
 }
 

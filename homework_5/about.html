@@ -1,58 +1,66 @@
 <!DOCTYPE html>
-<html lang="eng">
-
-
+<html lang="en">
     <head>
+        <!-- External Links to CSS files -->
+        <link rel="stylesheet" media="all" type="text/css" href="style.css">
+
         <title>Muddy Paws Adventure Gears</title>
     </head>
 
     <body>
-        <div id="container">
-            <header>
-                <div class="logo">
-                    <h1><img src="images/logo.png" alt="logo" width="100">Muddy Paws Adventure Gears</h1>
+        <div id="wrap">
+
+            <div id="top_row">
+                <!-- Logo -->
+                <div>
+                    <img src="images/logo.png" alt="logo" class="logo">
                 </div>
-                <!-- Search Bar -->
-                <form>
-                    <input placeholder="What are you looking for?">
-                    <button type="submit">Search</button>
-                </form> 
+                
 
+                <!-- Search Bar Reference: https://codepen.io/huange/pen/rbqsD -->
+                <div class="searchBar">
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                        <button type="submit" class="searchButton">Search</button>
+                    </div>
+                </div>
+                
                 <!-- Shopping Cart -->
-                <a href="cart.html"><input type="image" src="images/cart.png"></a>
+                <a href="cart.html" class="cart"><input type="image" src="images/cart.png" alt="shopping cart icon" width="50"></a>
+            </div>
 
-                <!-- Navigation -->
-                <nav>
-                    <a href="products.html">Harness</a>
-                    <a href="products.html">Attachment</a>
-                    <a href="products.html">Collar</a>
-                    <a href="products.html">Backpack</a>
+            <!-- Navigation -->
+            <nav>
+            <div id="nav">
+                <a href="products.html">Harness</a>
+                <a href="products.html">Attachment</a>
+                <a href="products.html">Collar</a>
+                <a href="products.html">Backpack</a>
+            </div>
+            </nav> 
 
-                    <button>Browse All Products</button>
-                    <button>Shop Cat's</button>
-                    <button>Shop Dog's</button>
-                </nav>
-
-            </header>
-
+            <!-- Content -->
             <div id="content">
                 <h2>About Muddy Paws</h2>
                 <div id="about">
-                    <img src="images/about_us.png" alt="image dog" width="90%">
-                    <p>We are a small store that sells customizable hiking and adventuring gear for your cat or dog. We are committed to helping 
+                    <img src="images/about_us.png" alt="image dog" width="100%">
+                    <p width="90%">We are a small store that sells customizable hiking and adventuring gear for your cat or dog. We are committed to helping 
                         all cats and dogs live to their full potential, experiencing the wild alongside their human hiker pals! </p>
                 </div>
             </div>
+
+            <!-- Footer -->
+            <footer>
+                <div id="aboutpage">
+                    <a href="about.html">AboutUs</a>
+                    <a href="contact.html">ContactUs</a>
+                </div>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="instagram icon"></a>
+                <a href="https://youtube.com/" target="_blank"><img src="images/youtube.png" alt="youtube icon"></a>
+
+            </footer>
         </div>
     </body>
 
-    <!-- Footer -->
-    <footer>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" ></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" ></a>
-        <a href="https://youtube.com/" target="_blank"><img src="images/youtube.png" ></a>
-    </footer>
-
-</html>
+</html>           
