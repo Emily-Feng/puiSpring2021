@@ -1,7 +1,7 @@
 /* CSS document */
 
 #wrap {
-  width: 90%;
+  width: 100%;
   margin: 10px auto;
 }
 
@@ -71,12 +71,11 @@
   padding-top: 25px;
   position: absolute;
   top: 0%;
-  right: 13%;
+  right: 5%;
   /* border: solid 1px; */
 }
 
 #nav {
-  float: left;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -111,8 +110,8 @@
 
 /* Responisve image */
 .container img {
-  width: 100%;
-  padding: .5em .5em .5em .5em;
+  width: 115%;
+  padding: 1.2em 1em 1em 1em;
 }
   
 /* Style the button and place it in the middle of the container/image */
@@ -191,6 +190,33 @@ footer {
   word-spacing: 2em;
   padding-left; 3em;
   padding-right: 2em;
+}
+
+.wrapper {
+  margin: 2em;
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  grid-template-rows: 300px 300px ;
+  grid-gap: 120px;
+  background-color: #fff;
+  color: #fff;
+  
+}
+
+.box {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  border: solid #000000;
+  font-size: 1.3em;
+}
+
+.box img {
+  width: 100%;
+}
+
+.box a {
+  float: right;
 }
 
 footer a {
