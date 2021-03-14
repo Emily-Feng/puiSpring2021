@@ -103,6 +103,12 @@
   color: #3F7C9D;
 }
 
+#content{
+  float: left;
+  padding: 2em;
+  /* padding-bottom: 30px; */
+}
+
 /* position the button */
 #container {
   position: relative;
@@ -110,14 +116,14 @@
 
 /* Responisve image */
 .container img {
-  width: 115%;
+  width: 110%;
   padding: 1.2em 1em 1em 1em;
 }
   
 /* Style the button and place it in the middle of the container/image */
 .container .btn {
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -171,27 +177,6 @@
   padding-bottom: 3%;
 }
 
-#content{
-  float: left;
-  /* padding-bottom: 30px; */
-}
-
-footer {
-  clear: both;
-  margin: 10px;
-  color: #333333;
-  text-align: center;
-  border-top: solid 1px;
-}
-
-#page {
-  color: #000000;
-  font-size: 1.5em;
-  word-spacing: 2em;
-  padding-left; 3em;
-  padding-right: 2em;
-}
-
 .wrapper {
   margin: 2em;
   display: grid;
@@ -219,8 +204,41 @@ footer {
   float: right;
 }
 
+footer {
+  clear: both;
+  margin: 10px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: #333333;
+  text-align: center;
+  border-top: solid 1px;
+}
+
 footer a {
   color: #000000;
+}
+
+#homepage {
+  color: #000000;
+  font-size: 1.5em;
+  word-spacing: 5em;
+  padding-left: 3em;
+  padding-right: 2em;
+  position: absolute;
+  top: 127%;
+  left: 40%;
+}
+
+
+#page {
+  color: #000000;
+  font-size: 1.5em;
+  word-spacing: 5em;
+  padding-left: 3em;
+  padding-right: 2em;
+  position: absolute;
+  top: 112%;
+  left: 40%;
 }
 
 footer a:visited {
@@ -231,8 +249,8 @@ footer img {
   width: 2.5em;
   filter: grayscale(100%);
   position: relative;
-  left: 40%;
-  padding-top: 2em;
-  padding-left; 2em;
+  left: 35%;
+  padding-top: 1em;
+  padding-left: 2em;
   padding-right: 2em;
 }
