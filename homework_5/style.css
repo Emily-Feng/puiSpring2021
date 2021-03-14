@@ -248,7 +248,7 @@
   padding: 0%;
 }
 
-.btnGroupHorizontal .btn-1{
+.btnGroupHorizontal #btn-1{
   width: 80px;
   height: 40px;
   float: left;
