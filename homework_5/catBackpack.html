@@ -60,26 +60,27 @@
                     <div>
                         <p>$127.65</p>
                     </div>
-                    <div class="productColor">
+                    <div>
                         <p>Color: </p>
-                        <div class="btnGroupHorizontal">
-                            <button class="btn"><img src="images/strawberry.png" alt="color strawberry"><input type="button" value="strawberry"></button>
-                            <button class="btn"><img src="images/blackberry.png" alt="color blackberry"><input type="button" value="blackberry"></button>
-                            <button class="btn"><img src="images/crazyberry.png" alt="color crazyberry"><input type="button" value="crazyberry"></button>
-                            <button class="btn"><img src="images/fireOrange.png" alt="color fireOrange"><input type="button" value="fireOrange"></button>
+                        <div id="btn" class="btnGroupHorizontal">
+                            <input type="image" src="images/strawberry.png" alt="color strawberry" value="strawberry">
+                            <input type="image" src="images/blackberry.png" alt="color blackberry" value="blackberry">
+                            <input type="image" src="images/crazyberry.png" alt="color crazyberry" value="crazyberry">
+                            <input type="image" src="images/fireOrange.png" alt="color fireOrange" value="fireOrange">
                         </div>
                     </div>
-                    <div class="productSize">
+                    <div>
                         <p>Size: </p>
+                        <a href="images/sizeChart.png" target="_blank" id="sizeChart">Size Chart</a>
                         <div id="btn-1" class="btnGroupHorizontal">
-                            <input type="button" value="Tiny" onclick="msg()">
-                            <input type="button" value="Small" onclick="msg()">
-                            <input type="button" value="Medium" onclick="msg()">
-                            <input type="button" value="Large" onclick="msg()">
+                            <input type="button" class="size" value="Tiny">
+                            <input type="button" class="size" value="Small">
+                            <input type="button" class="size" value="Medium">
+                            <input type="button" class="size" value="Large">
                         </div>
                     </div>
-                    <div class="productQty">
-                        <p>Quantity: <input type="text" id="qty" name="qty" value="1" size="2"></p>  
+                    <div>
+                        <p>Quantity: <input type="text" class="qty" name="qty" value="1" size="2"></p>  
                     </div>
                     <div>
                         <input type="submit" id="addToCart" name="addToCart" value="Add to Cart">
