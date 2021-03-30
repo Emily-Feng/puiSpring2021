@@ -198,7 +198,7 @@
   min-height: 1px;
 }
 
-.leftCol .mainImage {
+.leftCol #mainImage {
   width: 490px;
   padding: 8em;
   overflow: visible;
@@ -264,6 +264,12 @@ input.qty {
   position: absolute;
   right: 10%;
   margin: 20px;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 300;
+  margin: 10px;
 }
 
 h3 {
