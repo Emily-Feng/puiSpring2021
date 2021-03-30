@@ -1,13 +1,13 @@
 /* CSS document */
 
-#wrap {
+.wrap {
   width: 100%;
   margin: 10px auto;
 }
 
 #top_row{
   width: 100%;
-  padding: .5em .5em 3em .5em;
+  padding: .2em .5em 1.5em .5em;
   vertical-align: middle;
   border-bottom: 1px dotted #ccc;
 }
@@ -15,9 +15,7 @@
 .logo {
   float: left;
   width: 15%;
-  /* background: #555; */
-  padding: .5em 1em;
-  /* border: 1px solid; */
+  padding-left: 1em;
 }
   
 .searchTerm {
@@ -49,13 +47,9 @@
 
 .SearchBar{
   width: 30%;
-  /* position: absolute; */
   float: right;
-  /* top: 80%;
-  left: 80%;
-  transform: translate(-80%, -20%); */
+  transform: translate(-80%, -20%);
   display: flex;
-  /* border: solid 1px; */
 }
 
 .search {
@@ -103,86 +97,67 @@
   color: #3F7C9D;
 }
 
-#content{
-  float: left;
-  padding: 1.5em;
-  /* padding-bottom: 30px; */
+.content{
+  margin: .5em 2em .5em 2em;
+  width: 80%;
 }
 
-/* position the button */
-#container {
-  position: relative;
+.content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Responisve image */
-.container img {
-  width: 110%;
-  padding: .5em 1em 1em 1em;
-}
-  
-/* Style the button and place it in the middle of the container/image */
-.container .btn {
+.content .btn {
   position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  top: 70%;
+  left: 45%;
   background-color: #5485CFCC;
   color: white;
   font-size: 16px;
   padding: 12px 24px;
-  border: none;
   cursor: pointer;
   border-radius: 5px;
 }
   
-.container .btn:hover {
+.content .btn:hover {
   background-color: #5485CF;
 }
 
-.shop_cat .btn {
-  position: absolute;
+#shop_cat .btn {
   left: 20%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   background-color: #0B3E5AB3;
   color: white;
   font-size: 16px;
   padding: 12px 24px;
-  border: none;
   cursor: pointer;
   border-radius: 5px;
 }
 
-.shop_dog .btn {
-  position: absolute;
-  right: 20%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+#shop_cat .btn:hover {
+  background-color: #5485CF;
+}
+
+#shop_dog .btn {
+  left: 75%;
   background-color: #0B3E5AB3;
   color: white;
   font-size: 16px;
   padding: 12px 24px;
-  border: none;
   cursor: pointer;
   border-radius: 5px;
 }
 
-.shop_category .btn:hover {
-  background-color: #0B3E5A;
-}
-
-.shop_category {
-  padding-top: 3%;
-  padding-bottom: 3%;
+#shop_dog .btn:hover {
+  background-color: #5485CF;
 }
 
 .wrapper {
-  margin-left: 2em;
+  margin: .5em 4em 4em 4em;
   display: grid;
-  grid-template-columns: 500px 500px 500px;
-  grid-template-rows: 300px 300px ;
-  grid-gap: 120px;
+  grid-template-columns: 450px 450px 450px;
+  grid-template-rows: 270px 270px ;
+  grid-gap: 5%;
   background-color: #fff;
   color: #fff;
   
@@ -202,20 +177,16 @@
 
 .box a {
   float: right;
+  margin-right: 5px;
+}
+
+.box small{
+  margin-left: 5px;
 }
 
 #leftCol {
   padding-top: 1em;
   left: 0;
-}
-
-#rightCol {
-  content: "";
-  display: table;
-  clear: both;
-  position: absolute;
-  right: 20%;
-  top: 30%;
 }
 
 .btnGroupVertical {
@@ -225,6 +196,21 @@
   position: relative;
   overflow: hidden;
   min-height: 1px;
+}
+
+.leftCol .mainImage {
+  width: 490px;
+  padding: 8em;
+  overflow: visible;
+}
+
+#rightCol {
+  content: "";
+  display: table;
+  clear: both;
+  position: absolute;
+  right: 20%;
+  top: 20%;
 }
 
 .btnGroupHorizontal #btn{
@@ -243,54 +229,52 @@
   padding: 0%;
 }
 
-.leftCol .mainImage {
-  width: 10%;
-  padding: 8em;
-  overflow: visible;
+input.color:focus {
+  height: 90px;
+}
+
+input.size {
+  font-size: 24px;
+  width: 150px;
+  height: 40px;
+}
+
+input.size:focus{
+  background-color: #fff;
+  height: 50px;
+}
+
+input.qty {
+  font-size: 36px;
+}
+
+#addToCart {
+  margin: .5em;
+  display: block;
+  width: 500px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 36px;
+  font-weight: 200;
+  box-shadow: 0 0 0 7px var(--light) inset;
+}
+
+#rightCol a {
+  font-size: 18px;
+  position: absolute;
+  right: 10%;
+  margin: 20px;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 100;
+  margin: 10px;
 }
 
 #sizeChart {
   color: #000;
-  float: right;
-  position: absolute;
-  top: 60%;
-  right: 10%;
-}
-
-input.size {
-  font-size: 1em;
-  width: 100px;
-  height: 30px;
-}
-
-input.button:checked {
-  border: solid blue;
-}
-
-input.qty {
-  font-size: 1em;
-}
-
-
-#addToCart {
-  margin: 1em;
-  display: block;
-  width: 400px;
-  height: 70px;
-  border-radius: 30px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  box-shadow: 0 0 0 7px var(--light) inset;
-}
-
-p {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 3em;
-  margin: 0%;
-  margin-bottom: 1%;
+  top: 52%;
 }
 
 footer {
@@ -307,50 +291,15 @@ footer a {
   color: #000000;
 }
 
-#homepage {
+#links {
   color: #000000;
   font-size: 1.5em;
   word-spacing: 5em;
+  position: absolute;
   padding-left: 3em;
   padding-right: 2em;
-  position: absolute;
-  top: 125%;
-  left: 40%;
-}
-
-
-#page {
-  color: #000000;
-  font-size: 1.5em;
-  word-spacing: 5em;
-  padding-left: 3em;
-  padding-right: 2em;
-  position: absolute;
-  top: 112%;
-  left: 40%;
-}
-
-#aboutpage {
-  color: #000000;
-  font-size: 1.5em;
-  word-spacing: 5em;
-  padding-left: 3em;
-  padding-right: 2em;
-  position: absolute;
-  top: 177%;
-  left: 40%;
-}
-
-#detailpage {
-  color: #000000;
-  font-size: 1.5em;
-  word-spacing: 5em;
-  padding-left: 3em;
-  padding-right: 2em;
-  position: absolute;
-  top: 125%;
-  left: 40%;
-}
+  left: 35%;
+} 
 
 footer a:visited {
   color: black;
@@ -361,7 +310,6 @@ footer img {
   filter: grayscale(100%);
   position: relative;
   left: 35%;
-  padding-top: 1em;
   padding-left: 2em;
   padding-right: 2em;
 }
