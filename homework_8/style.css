@@ -184,6 +184,10 @@
   margin-left: 5px;
 }
 
+.row {
+  margin: .5em 2em .5em 2em;
+}
+
 #leftCol {
   padding-top: 1em;
   left: 0;
