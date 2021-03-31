@@ -233,10 +233,6 @@
   padding: 0%;
 }
 
-input.color:focus {
-  height: 90px;
-}
-
 input.size {
   font-size: 24px;
   width: 150px;
@@ -280,6 +276,12 @@ h3 {
   font-size: 36px;
   font-weight: 100;
   margin: 10px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 100;
+  margin: 5px;
 }
 
 #sizeChart {

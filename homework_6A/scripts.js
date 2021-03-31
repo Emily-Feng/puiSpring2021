@@ -91,3 +91,25 @@ function generateItem(option, color, size, qty) {
         return new backpack(color, size, qty);
     }
 }
+
+var addedItems = []
+
+function addListItem() {
+    let list = document.getElementById("item-list");
+    
+    let inputOption = 5;
+    let inputColor = document.getElementById("color1");
+    let inputSize = document.getElementById("size1");
+    let inputQty = document.getElementById("qty");
+    let itemInput = generateItem(inputOption, inputColor, inputSize, inputQty);
+
+    addListItems.push(itemInput);
+}
+
+function onLoad() {
+    let title = document.getElementById("title");
+    console.log(addedItems);
+    let numItems = addedItems.length;
+    title.innerHTML = numItems + " items";
+
+}

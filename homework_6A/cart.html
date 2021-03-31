@@ -3,17 +3,18 @@
     <head>
         <!-- External Links to CSS files -->
         <link rel="stylesheet" media="all" type="text/css" href="style.css">
+        <script type="text/javascript" src="scripts.js"></script>
 
         <title>Muddy Paws Adventure Gears</title>
     </head>
 
     <body>
-        <div id="wrap">
+        <div class="wrap">
 
             <div id="top_row">
                 <!-- Logo -->
                 <div>
-                    <a href="index.html"><img src="images/logo.png" alt="logo" class="logo"></a>
+                    <a href="index.html"><img src="images/logo.png" alt="logo" class="logo"></a> 
                 </div>
                 
 
@@ -24,9 +25,6 @@
                         <button type="submit" class="searchButton">Search</button>
                     </div>
                 </div>
-                
-                <!-- Shopping Cart -->
-                <a href="cart.html" class="cart"><img src="images/cart.png" alt="shopping cart icon" width="50"></a>
             </div>
 
             <!-- Navigation -->
@@ -38,26 +36,25 @@
                     <a href="products.html">Backpack</a>
                 </div>
             </nav>  
-            
-            <!-- Content -->
-            <div id="content">
-                <div class="container">
-                    <img src="images/home.jpg" alt="hiking dog">
-                    <a href="products.html"><button class="btn">Browse All Products</button></a>         
-                </div>
 
-                <div class="shop_category">
-                    <div class="shop_cat">
-                        <a href="products.html"><button class="btn">Shop Cat's</button></a>
-                    </div>
-                    <div class="shop_dog">
-                        <a href="products.html"><button class="btn">Shop Dog's</button></a>
-                    </div>
+            <!-- Content -->
+            <div id="content" onload="onLoad()">
+                <h2>Shopping Cart </h2>
+                <div id="items">
+                    <h3 id="title"></h3>
+                    <hr>
+                    <ol id="item-list">
+                        <img id="cart-item-image" src="" alt="">
+                        <h4 id="product-name"></h4>
+                        <h4 id="product-price"></h4>
+                        <h4 id="product-color"></h4>
+                        <h4 id="product-size"></h4>
+                    </ol>
+
                 </div>
             </div>
-           
-                
-                
+
+
 
             <!-- Footer -->
             <footer>
@@ -73,4 +70,4 @@
         </div>
     </body>
 
-</html>
+</html>        
