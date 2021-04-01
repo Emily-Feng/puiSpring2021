@@ -64,7 +64,7 @@ function onLoad() {
     newItem.id = "item";
 
     let itemImage = document.createElement("img");
-    itemImage.src = "images/backpack1.png";
+    itemImage.src = "Assets/images/backpack1.png";
     itemImage.alt = "cat backpack";
     itemImage.id = "item-image";
     let itemTitle = document.createElement("h4");
