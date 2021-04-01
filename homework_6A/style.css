@@ -233,13 +233,19 @@
   padding: 0%;
 }
 
-input.size {
+button.color {
+  width: 80px;
+  height: 80px;
+  padding: 0%;
+}
+
+button.size {
   font-size: 24px;
   width: 150px;
   height: 40px;
 }
 
-input.size:focus{
+button.size:focus{
   background-color: #fff;
   height: 50px;
 }
@@ -257,6 +263,18 @@ input.qty {
   font-size: 36px;
   font-weight: 200;
   box-shadow: 0 0 0 7px var(--light) inset;
+}
+
+#item-image {
+  width: 180px;
+  position: absolute;
+  float: left;
+}
+
+#item h4 {
+  margin: 25px;
+  position: relative;
+  left: 20%;
 }
 
 #rightCol a {

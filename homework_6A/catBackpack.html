@@ -42,15 +42,15 @@
 
             <!-- Content -->
             <div class="row">
-                <a href="products.html">&lt back</a>
+                <a href="products.html">&lt; back</a>
                 <div id="leftCol">
                     <div class="btnGroupVertical">
-                        <button class="btn"><img src="images/backpack1.png"></button>
-                        <button class="btn"><img src="images/backpack2.png"></button>
-                        <button class="btn"><img src="images/backpack3.png"></button>
-                        <button class="btn"><img src="images/backpack4.png"></button>
+                        <button class="btn"><img src="images/backpack1.png" alt="product demo1"></button>
+                        <button class="btn"><img src="images/backpack2.png" alt="product demo2"></button>
+                        <button class="btn"><img src="images/backpack3.png" alt="product demo3"></button>
+                        <button class="btn"><img src="images/backpack4.png" alt="product demo4"></button>
                     </div>
-                    <img src="images/backpackMain.png" alt="cat backpack" id="mainImage" width="500px">                    
+                    <img src="images/backpackMain.png" alt="cat backpack" id="mainImage" width="500">                    
                 </div>
                 <div id="rightCol">
                     <h3>Cat Backpack</h3>
@@ -58,24 +58,27 @@
                     <br /><br />
                     <h3>$127.65</h3>
                     <br />
-                    <h3>Color: </h3>
+                    
                     <div id="btn" class="btnGroupHorizontal">
-                        <input type="checkbox" class="color" id="color1" value="strawberry"><img src="images/strawberry.png" alt="color strawberry">
-                        <input type="checkbox" class="color" id="color2" value="blackberry"><img src="images/blackberry.png" alt="color blackberry">
-                        <input type="checkbox" class="color" id="color3" value="crazyberry"><img src="images/crazyberry.png" alt="color crazyberry">
-                        <input type="checkbox" class="color" id="color4" value="fireOrange"><img src="images/fireOrange.png" alt="color fireOrange">
+                        <h3 id="colorInput">Color: Strawberry</h3>
+                        <br />
+                        <button onclick="color1()" class="color"><img src="images/strawberry.png" alt="color strawberry"></button>
+                        <button onclick="color2()" class="color"><img src="images/blackberry.png" alt="color blackberry"></button>
+                        <button onclick="color3()" class="color"><img src="images/crazyberry.png" alt="color crazyberry"></button>
+                        <button onclick="color4()" class="color"><img src="images/fireOrange.png" alt="color fireOrange"></button>
                     </div>
+
                     <h3>Size: </h3>
                     <a href="images/sizeChart.png" target="_blank" id="sizeChart">Size Chart</a>
                     <div id="btn-1" class="btnGroupHorizontal">
-                        <input type="button" class="size" id="size1" value="Tiny">
-                        <input type="button" class="size" id="size2" value="Small">
-                        <input type="button" class="size" id="size3" value="Medium">
-                        <input type="button" class="size" id="size4" value="Large">
+                        <button class="size" onclick="setSize1()">Tiny</button>
+                        <button class="size" onclick="setSize2()">Small</button>
+                        <button class="size" onclick="setSize3()">Medium</button>
+                        <button class="size" onclick="setSize4()">Large</button>
                     </div>
                     <br />
-                    <h3>Quantity: <input type="text" class="qty" id="qty" name="qty" value="1" size="2"></h3>  
-                    <button onclick="addListItem()" id="addToCart">Add to Cart</button>
+                    <h3>Quantity: <input type="text" class="qty" id="qty" value="1" size="2"></h3>  
+                    <button id="addToCart" onclick="addListItem()">Add to Cart</button>
                     
                 </div>
             </div>
