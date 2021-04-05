@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- External Links to CSS files -->
+        <link rel="stylesheet" media="all" type="text/css" href="Assets/style.css">
+        <script type="text/javascript" src="Assets/scripts.js"></script>
+
+        <title>Muddy Paws Adventure Gears</title>
+    </head>
+
+    <body onload="onLoad()">
+        <div class="wrap">
+
+            <div id="top_row">
+                <!-- Logo -->
+                <div>
+                    <a href="index.html"><img src="Assets/images/logo.png" alt="logo" class="logo"></a> 
+                </div>
+                
+
+                <!-- Search Bar Reference: https://codepen.io/huange/pen/rbqsD -->
+                <div class="searchBar">
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                        <button type="submit" class="searchButton">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <div id="nav">
+                    <a href="products.html">Harness</a>
+                    <a href="products.html">Attachment</a>
+                    <a href="products.html">Collar</a>
+                    <a href="products.html">Backpack</a>
+                </div>
+            </nav>  
+
+            <!-- Content -->
+            <div class="content">
+                <h2>Shopping Cart </h2>
+                <!-- <button onclick="clearAll()">Clear</button> -->
+                <div id="items">
+                    <h1 id="header">0 items</h1>
+                    <ul id="list">
+
+                    </ul>
+                </div>
+
+                <button onclick="clearAll()">Clear</button>
+            </div>
+
+
+
+            <!-- Footer -->
+            <footer>
+                <div id="links">
+                    <a href="about.html">AboutUs</a>
+                    <a href="contact.html">ContactUs</a>
+                </div>
+                <a href="https://www.facebook.com/" target="_blank"><img src="Assets/images/facebook.png" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="Assets/images/instagram.png" alt="instagram icon"></a>
+                <a href="https://youtube.com/" target="_blank"><img src="Assets/images/youtube.png" alt="youtube icon"></a>
+                
+            </footer>
+        </div>
+    </body>
+
+</html>        
