@@ -1,5 +1,7 @@
-var num = 0;
+var qty = 0;
+var list = [];
 
+// constructors for 6 products
 function c_harness() {
     this.name = "Cat Harness";
     this.reviews = "16 Reviews";
@@ -57,21 +59,37 @@ function catBackpack() {
     this.main_alt = "cat backpack behind";
 }
 
+// building an array that contains all 6 products
 var products = [new c_harness(), new d_harness(), new f_storage(), new w_storage(), new collar(), new catBackpack()];
 
+// function that clear all local storage
 function clearAll() {
     localStorage.clear();
+    location.reload();
 }
 
+// when clicked add to cart, triggers this function, add all the data about the selected item to local storage
 function addListItem() {
+    // read and storage data about selected quantity
     var qty = document.getElementById("qty").value;
+    var newQty = parseInt(localStorage.getItem("qty")) + qty;
     localStorage.setItem("qty", qty);
     
-   localStorage.setItem("num", localStorage.getItem("num")+1);
+    // store the product id into the list for cart items
+    var list = JSON.parse(localStorage.getItem("list"));
+    // create list if empty
+    if (list === null) {
+        list = [];
+    }
+    var newItem = localStorage.getItem("product");
+    list.push(newItem);
+    localStorage.setItem("list", JSON.stringify(list));
 
+    // feedback on the status
     alert("Added to Cart");
 }
 
+// change when the user clicks into different products in product page
 function product1() {
     localStorage.setItem("product", "0");
 }
@@ -96,6 +114,7 @@ function product6() {
     localStorage.setItem("product", "5");
 }
 
+// changes the local storage when user chooses different color in detail page
 function color1(){
     var colorInput = document.getElementById("colorInput");
     colorInput.innerHTML = "Color: Strawberry";
@@ -120,6 +139,7 @@ function color4(){
     localStorage.setItem("color", "Fire Orange");
 }
 
+// changes the local storage when user chooses different sizes
 function setSize1() {
     localStorage.setItem("size", "Tiny");
 }
@@ -136,59 +156,104 @@ function setSize4() {
     localStorage.setItem("size", "Large");
 }
 
+// generate page for different product selected
 function loadDetail() {
+    // check which product is selected
     let productId = parseInt(localStorage.getItem("product"));
     var product = products[productId];
+    
+    // build the demo side bar
     let list = document.getElementById("demos");
     let demoA = document.getElementById("demo1");
     demoA.setAttribute("src", product.demo1);
-    // let newDemo = document.createElement("li");
-    // how to append an button item child?
-    // list.appendChild(newDemo);
 
+    // build the main image on the page
     let mainImg = document.getElementById("mainImage");
     mainImg.setAttribute("src", product.main);
     mainImg.setAttribute("alt", product.main_alt);
 
+    // build the information on the right column of the page
     let name = document.getElementById("name");
     name.innerHTML = product.name;
     let review = document.getElementById("review");
     review.innerHTML = product.reviews;
     let price = document.getElementById("price");
     price.innerHTML = product.price;
-
 }
 
+// load the shopping cart page
 function onLoad() {
+    // fetch the list of selected items
+    var cartList = JSON.parse(localStorage.getItem("list"));
+    let newItems = document.createElement("div");
+    newItems.class = "item";
+
     // header: count items in the cart
     var header = document.getElementById("header");
-    header.innerHTML = localStorage.getItem("num").length + " Items";
+    header.innerHTML = cartList.length + " items";
 
     // list
     let list = document.getElementById("list");
-    let newItem = document.createElement("li");
-    newItem.id = "item";
+    
+    // iterate through cart list
+    for (var i = 0; i < cartList.length; i++)
+    {
+        let newItem = document.createElement("div");
+        newItem.id = "item" + i;
+        // fetch item
+        let productId = parseInt(cartList[i]);
+        var product = products[productId];
 
-    let itemImage = document.createElement("img");
-    itemImage.src = "Assets/images/backpack1.png";
-    itemImage.alt = "cat backpack";
-    itemImage.id = "item-image";
-    let itemTitle = document.createElement("h4");
-    itemTitle.appendChild(document.createTextNode("Cat Backpack"));
-    let itemPrice = document.createElement("h4");
-    itemPrice.appendChild(document.createTextNode("$127.65"));
-    let itemColor = document.createElement("h4");
-    itemColor.appendChild(document.createTextNode("Color: " + localStorage.getItem("color")));
-    let itemSize = document.createElement("h4");
-    itemSize.appendChild(document.createTextNode("Size: " + localStorage.getItem("size")));
-    let itemQty = document.createElement("h4");
-    itemQty.appendChild(document.createTextNode("Quantity: " + localStorage.getItem("qty")));
+        //populate list item with information from the fetched product
+        let itemImage = document.createElement("img");
+        itemImage.src = product.main;
+        itemImage.alt = product.main_alt;
+        itemImage.id = "item-image"+i;
+        let itemTitle = document.createElement("h4");
+        itemTitle.appendChild(document.createTextNode(product.name));
+        let itemPrice = document.createElement("h4");
+        itemPrice.appendChild(document.createTextNode(product.price));
+        let itemColor = document.createElement("h4");
+        itemColor.appendChild(document.createTextNode("Color: " + localStorage.getItem("color")));
+        let itemSize = document.createElement("h4");
+        itemSize.appendChild(document.createTextNode("Size: " + localStorage.getItem("size")));
+        let itemQty = document.createElement("h4");
+        itemQty.appendChild(document.createTextNode("Quantity: " + localStorage.getItem("qty")));
+        let removeButton = document.createElement("span");
+        removeButton.innerHTML = '<button id="removal_"+i onclick = "removeItem(this)"> remove </button>';
+        let breakLine = document.createElement("hr");
 
-    newItem.appendChild(itemImage);
-    newItem.appendChild(itemTitle);
-    newItem.appendChild(itemPrice);
-    newItem.appendChild(itemColor);
-    newItem.appendChild(itemSize);
-    newItem.appendChild(itemQty);
-    list.appendChild(newItem);
+
+        // add the information to DOM
+        newItem.appendChild(itemImage);
+        newItem.appendChild(itemTitle);
+        newItem.appendChild(itemPrice);
+        newItem.appendChild(itemColor);
+        newItem.appendChild(itemSize);
+        newItem.appendChild(itemQty);
+        newItem.append(removeButton);
+        newItem.appendChild(breakLine);
+        list.appendChild(newItem);
+    }
+}
+
+// triggered when clicked on the remove button under each item
+function removeItem(buttonRemove) {
+    // get which item the user trying to remove
+    let span = buttonRemove.parentNode;
+    let itemDiv = span.parentNode;
+
+    // get the id of the item selected
+    let str = itemDiv.id.toString();
+    let id = parseInt(str.substring(str.length - 1, str.length));
+
+    // delete it from the array in local storage
+    var cartList = JSON.parse(localStorage.getItem("list"));
+    cartList.splice(id, 1);
+
+    // save the edited array
+    localStorage.setItem("list", JSON.stringify(cartList));
+
+    // reload the page to see the change
+    location.reload();
 }
