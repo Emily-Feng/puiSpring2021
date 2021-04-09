@@ -11,3 +11,11 @@ The goal of 6B is to add some JS to make the Shopping Cart interactive and so th
 ● How did you overcome these challenges?
 3. What programming concepts did you learn as a part of the assignment?
 ● Illustrate at least 5 concepts with an example.
+
+
+REGRADE:
+- styling for javascript and CSS
+
+
+Bonus:
+- carousel on product detail page

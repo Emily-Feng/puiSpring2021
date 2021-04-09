@@ -48,9 +48,12 @@ function collar() {
 }
 
 function catBackpack() {
+    // general info
     this.name = "Cat Backpack";
     this.reviews = "62 Reviews";
     this.price = "$127.65";
+
+    // images
     this.demo1 = "Assets/images/backpack1.png";
     this.demo2 = "Assets/images/backpack2.png";
     this.demo3 = "Assets/images/backpack3.png";
