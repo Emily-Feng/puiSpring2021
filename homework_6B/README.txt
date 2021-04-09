@@ -15,7 +15,3 @@ The goal of 6B is to add some JS to make the Shopping Cart interactive and so th
 
 REGRADE:
 - styling for javascript and CSS
-
-
-Bonus:
-- carousel on product detail page
