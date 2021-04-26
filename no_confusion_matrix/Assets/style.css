@@ -1,0 +1,13 @@
+/* CSS DOCUMENT */
+body {
+    width: 100%;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+  }
+  
+.column img {
+    width: 100%;
+}
