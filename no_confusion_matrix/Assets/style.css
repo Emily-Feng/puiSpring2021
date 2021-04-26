@@ -11,3 +11,18 @@ body {
 .column img {
     width: 100%;
 }
+
+/* grid */
+.grids p{
+    padding: 50px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    background: #dbdfe5;
+}
+
+.btn-group {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
