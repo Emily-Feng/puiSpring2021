@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -16,17 +16,18 @@
         <!-- External Links to CSS files -->
         <link rel="stylesheet" media="all" type="text/css" href="Assets/style.css">
 
-        <title>No Confusion Matrix</title>
-
         <link rel="stylesheet" media="all" type="text/css" href="Assets/drag_drop_styling.css">
         <script type="text/javascript" src="Assets/drag_drop.js"></script>
 
+
+        <title>No Confusion Matrix</title>
             
         
     </head>
 
     <body>
         <div class="container-fluid">
+
             <!-- back button -->
             <a href="index.html">&lt; back</a>
 
@@ -34,56 +35,60 @@
 
             <div class="card">
                 <div class="card-body">
-                    <h2>Evaluator: </h2>
+                    <h2>Algorithm: All people are female. </h2>
                 </div>
             </div>
 
-            <!-- Reference: http://www.dhtmlgoodies.com/index.html?whichScript=drag_drop_nodes -->
-            <div id="dhtmlgoodies_dragDropContainer">
+
+            <div class="playbox">
+                <!-- Reference: http://www.dhtmlgoodies.com/index.html?whichScript=drag_drop_nodes -->
                 
-                <div id="dhtmlgoodies_mainContainer">
-                    <!-- ONE <UL> for each "room" -->
-                    <div class="col-lg-5">
-                        <p>True Positive</p>
-                        <ul id="box1">
-                            <li id="node16">Word P</li>
-                        </ul>
+                <div id="dhtmlgoodies_dragDropContainer">
+                    
+                    <div id="dhtmlgoodies_mainContainer">
+                        <!-- ONE <UL> for each "room" -->
+                        <div>
+                            <p>True Positive</p>
+                            <ul id="TP"></ul>
+                        </div>
+                        <div>
+                            <p>False Negative</p>
+                            <ul id="FN"></ul>
+                        </div>
+                        <div>
+                            <p>False Positive</p>
+                            <ul id="FP"></ul>
+                        </div>
+                        <div>
+                            <p>True Negative</p>
+                            <ul id="TN"></ul>
+                        </div>
                     </div>
-                    <div class="col-lg-5">
-                        <p>False Negative</p>
-                        <ul id="box2"></ul>
-                    </div>
-                    <div class="col-lg-5">
-                        <p>False Positive</p>
-                        <ul id="box3">
-                            <li id="node17">Word Q</li>
-                            <li id="node18">Word R</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-5">
-                        <p>True Negative</p>
-                        <ul id="box4"></ul>
+
+                    <div class="col-lg-2" id="dhtmlgoodies_listOfItems">
+                        <div>
+                            <p>Instance Pond</p>
+                            <ul id="allItems">
+                                <li id="node1">Brandon</li>
+                                <li id="node2">Edward</li>
+                                <li id="node3">Katrina</li>
+                                <li id="node4">Jessica</li>
+                                <li id="node5">Rachel</li>
+                                <li id="node6">David</li>
+                                <li id="node7">Claire</li>
+                                <li id="node8">Rohan</li>
+                                <li id="node9">Angela</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-lg-2" id="dhtmlgoodies_listOfItems">
-                    <div>
-                        <p>Instance Pond</p>
-                        <ul id="allItems">
-                            <li id="node1">Word A</li>
-                            <li id="node2">Word B</li>
-                            <li id="node3">Word C</li>
-                            <li id="node4">Word D</li>
-                            <li id="node5">Word E</li>
-                            <li id="node6">Word F</li>
-                            <li id="node7">Word G</li>
-                            <li id="node8">Word H</li>
-                            <li id="node9">Word I</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-            <form action="aPage.html" method="post"><input type="button" class="btn btn-primary" onclick="saveDragDropNodes()" value="Check"></form>
+            
+            <div class="text-center">
+                <form action="aPage.html" method="post" id="check"><input type="button" class="btn btn-success" onclick="saveDragDropNodes()" value="Check"></form>
+            </div>
+            
             <ul id="dragContent"></ul>
             <div id="dragDropIndicator"><img src="Assets/images/insert.gif"></div>
             <div id="saveContent"><!-- THIS ID IS ONLY NEEDED FOR THE DEMO --></div>

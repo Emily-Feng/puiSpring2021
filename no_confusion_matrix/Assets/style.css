@@ -3,16 +3,81 @@ body {
     width: 100%;
 }
 
+body img {
+    width: 100%;
+}
+
+
+/* ------------- INDEX PAGE ------------- */
+/* three column structure */
 .column {
-    float: left;
     width: 33.33%;
-  }
-  
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
 .column img {
     width: 100%;
 }
 
-/* grid */
+/* three nav button*/
+.options {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    text-align: center;
+}
+
+
+#learn_concept {
+    position: absolute;
+    width: 400px;
+    top: -20%;
+    left: -20%;
+
+}
+
+#play_exercises {
+    position: absolute;
+    width: 400px;
+    top: -20%;
+    left: -20%;
+
+}
+
+#still_confused {
+    position: absolute;
+    width: 400px;
+    top: -20%;
+    left: -20%;
+
+}
+
+/* ------------- EXERCISES PAGE ------------- */
+.bg-image {
+    width: 100%;
+}
+
+#gnav {
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    text-align: center;
+}
+
+/* ------------- GAME PAGE ------------- */
+.playbox {
+    margin: 2%;
+}
+
+#check {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* ------------- GRID STRUCTURE ------------- */
 .grids p{
     padding: 50px;
     font-size: 32px;
@@ -21,8 +86,55 @@ body {
     background: #dbdfe5;
 }
 
+/* ------------- BUTTONS ------------- */
 .btn-group {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.btn-toolbar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+.btn-primary {
+    width: 300px;
+}
+
+.btn-secondary {
+    width: 300px;
+    height: 50px;
+}
+
+.btn-success {
+    width: 1000px;
+}
+
+.nav-item {
+    width: 300px;
+    height: 50px;
+}
+
+/* ------------- MEDIA -------------*/
+h1 {
+    color: white;
+}
+
+.display-1 {
+    padding: 15%;
+    text-align: center;
+}
+
+.jumbotron-fluid {
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+}
+
+.card {
+    margin: 2%;
 }
