@@ -1,7 +1,7 @@
 #dhtmlgoodies_dragDropContainer{	/* Main container for this script */
-    width:790px;
-    height:600px;
-    border:1px solid #317082;
+    width:90%;
+    height:90%;
+    border:1px solid #4274D7;
     background-color:#FFF;
 }
 #dhtmlgoodies_dragDropContainer ul{	/* General rules for all <ul> */
@@ -13,29 +13,30 @@
 
 #dhtmlgoodies_dragDropContainer li,#dragContent li,li#indicateDestination{	/* Movable items, i.e. <LI> */
     list-style-type:none;
-    height:50px;
+    height:25%;
     background-color:#EEE;
     border:1px solid #000;
     padding:2px;
     margin-bottom:2px;
     cursor:pointer;
-    font-size:0.9em;
+    font-size:2em;
 }
 
 li#indicateDestination{	/* Box indicating where content will be dropped - i.e. the one you use if you don't use arrow */
-    border:1px solid #317082;
+    border:1px solid #4274D7;
     background-color:#FFF;
 }
 
 /* RIGHT COLUMN CSS */
 #dhtmlgoodies_listOfItems{	/* Right column "Available students" */
+    height: 150%;
     float:right;
-    padding-left:10px;
-    padding-right:10px;
-    margin-right: 5%;
+    padding-left:2%;
+    padding-right:2%;
+    margin-right: 10%;
 }
 #dhtmlgoodies_listOfItems ul{	/* Right(Sources) column <ul> */
-    height:560px;
+    height:150%;
 }
 
 #dhtmlgoodies_listOfItems div{
@@ -43,12 +44,13 @@ li#indicateDestination{	/* Box indicating where content will be dropped - i.e. t
 }
 #dhtmlgoodies_listOfItems div ul{	/* Right column <ul> */
     margin-left:10px;	/* Space at the Left of list - the arrow will be positioned there */
+    margin-bottom: 10%;
 }
 #dhtmlgoodies_listOfItems div p{	/* Heading above Right column */
     margin:0px;
     font-weight:bold;
     padding-left:12px;
-    background-color:#317082;
+    background-color:#4274D7;
     color:#FFF;
     margin-bottom:5px;
 }
@@ -56,42 +58,43 @@ li#indicateDestination{	/* Box indicating where content will be dropped - i.e. t
 
 #dhtmlgoodies_dragDropContainer .mouseover{	/* Mouse over effect DIV box in left column */
     background-color:#E2EBED;
-    border:1px solid #317082;
+    border:1px solid #4274D7;
 }
 
 /* Start main container CSS */
 
 #dhtmlgoodies_mainContainer{	/* Left column DIV */
-    width:1000px;
+    width:60%;
     float:left;
     margin-left: 5%;
 }
 #dhtmlgoodies_mainContainer div{	/* Parent <div> of small boxes */
+    width: 40%;
     float:left;
-    margin-right:80px;
-    margin-bottom:30px;
+    margin-right:2%;
+    margin-bottom:.5%;
     margin-top:0px;
     border:1px solid #999;
 }
 #dhtmlgoodies_mainContainer div ul{
     margin-left:10px;
-    width: 300px;
-    height: 300px;
+    width: 90%;
+    height: 20%;
 }
 
 #dhtmlgoodies_mainContainer div p{	/* Heading above small boxes */
     margin:0px;
     padding:0px;
-    padding-left:12px;
+    padding-left:1%;
     font-weight:bold;
-    background-color:#317082;
+    background-color:#4274D7;
     color:#FFF;
     margin-bottom:5px;
 }
 
 #dhtmlgoodies_mainContainer ul{	/* Small box in Left column ,i.e <ul> */
-    width:152px;
-    height:200px;
+    width:20%;
+    height:1%;
     border:1px;
     margin-bottom:0px;
     overflow:hidden;
@@ -99,8 +102,8 @@ li#indicateDestination{	/* Box indicating where content will be dropped - i.e. t
 
 #dragContent{	/* Drag container */
     position:absolute;
-    width:150px;
-    height:20px;
+    width:10%;
+    height:15%;
     display:none;
     margin:0px;
     padding:0px;

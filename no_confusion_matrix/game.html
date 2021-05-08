@@ -15,10 +15,9 @@
 
         <!-- External Links to CSS files -->
         <link rel="stylesheet" media="all" type="text/css" href="Assets/style.css">
-
         <link rel="stylesheet" media="all" type="text/css" href="Assets/drag_drop_styling.css">
+        <link rel="stylesheet" media="all" type="text/css" href="Assets/animations.css">
         <script type="text/javascript" src="Assets/drag_drop.js"></script>
-
 
         <title>No Confusion Matrix</title>
             
@@ -28,14 +27,38 @@
     <body>
         <div class="container-fluid">
 
-            <!-- back button -->
-            <a href="index.html">&lt; back</a>
+            <div class="header" style="background-image: url('Assets/images/middle.jpeg');">
+                <!-- back button -->
+                <a class="btn btn-info" href="exercises.html">&lt; back</a>
 
-            <h1>LEVEL: EASY</h1>
+                <h1 id="level" style="color: black; text-align: center;">LEVEL: EASY</h1>
 
-            <div class="card">
-                <div class="card-body">
-                    <h2>Algorithm: All people are female. </h2>
+                <div class="card-transparent fadeIn">
+                    <div class="card-body">
+                        <h2 id="algorithm">Algorithm: All people are female. </h2>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- animations for correct or incorrect -->
+            <div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Result</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <h2 id="result"></h2>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-info" data-dismiss="modal">Try again</button>
+                      <a class="btn btn-light" href="exercises.html">Try other level</a>
+                    </div>
+                  </div>
                 </div>
             </div>
 
@@ -65,7 +88,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-2" id="dhtmlgoodies_listOfItems">
+                    <div class="col-lg-3" id="dhtmlgoodies_listOfItems">
                         <div>
                             <p>Instance Pond</p>
                             <ul id="allItems">
@@ -77,7 +100,6 @@
                                 <li id="node6">David</li>
                                 <li id="node7">Claire</li>
                                 <li id="node8">Rohan</li>
-                                <li id="node9">Angela</li>
                             </ul>
                         </div>
                     </div>
@@ -86,12 +108,15 @@
             </div>
             
             <div class="text-center">
-                <form action="aPage.html" method="post" id="check"><input type="button" class="btn btn-success" onclick="saveDragDropNodes()" value="Check"></form>
+                <form action="aPage.html" method="post" id="check"><input type="button" class="btn btn-success floating btn3d" onclick="saveDragDropNodes()" value="Check Answer" data-toggle="modal" data-target="#message"></form>
             </div>
             
             <ul id="dragContent"></ul>
             <div id="dragDropIndicator"><img src="Assets/images/insert.gif"></div>
             <div id="saveContent"><!-- THIS ID IS ONLY NEEDED FOR THE DEMO --></div>
+
+            
+
         </div>
 
     </body>

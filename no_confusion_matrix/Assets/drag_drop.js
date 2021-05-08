@@ -24,8 +24,9 @@ Owner of DHTMLgoodies.com
 
 ************************************************************************************************************/
 
+
 /* VARIABLES YOU COULD MODIFY */
-var boxSizeArray = [4,4,4,3];	// Array indicating how many items there is rooom for in the right column ULs
+var boxSizeArray = [4,4,4,4];	// Array indicating how many items there is rooom for in the right column ULs
 
 
 var verticalSpaceBetweenListItems = 3;	// Pixels space between one <li> and next
@@ -279,20 +280,122 @@ function saveDragDropNodes()
 {
     var saveString = "";
     var uls = dragDropTopContainer.getElementsByTagName('UL');
-    for(var no=0;no<uls.length;no++){	// LOoping through all <ul>
+    for(var no=0;no<uls.length;no++){	// Looping through all <ul>
         var lis = uls[no].getElementsByTagName('LI');
         for(var no2=0;no2<lis.length;no2++){
-            if(saveString.length>0)saveString = saveString + ";";
+            if(saveString.length>0)
+                saveString = saveString + ";";
             saveString = saveString + uls[no].id + '|' + lis[no2].id;
         }
     }
 
-    // document.getElementById('saveContent').innerHTML = '<h1>Ready to save these nodes:</h1> ' + saveString.replace(/;/g,';<br>') + '<p>Format: ID of ul |(pipe) ID of li;(semicolon)</p><p>You can put these values into a hidden form fields, post it to the server and explode the submitted value there</p>';
+    // document.getElementById('saveContent').innerHTML = '<h1>Ready to save these nodes:</h1> ' + saveString.replace(/;/g,';<br>');
+
+    checkAnswer(saveString);
+}
+
+/*
+Self-Written function: check answer from the saveString
+*/
+function checkAnswer(answer)
+{
+    var answerList = answer.split(";");
+    var tp = [];
+    var fp = [];
+    var fn = [];
+    var tn = [];
+
+    var correct = true;
+    for (var i=0; i<answerList.length; i++)
+    {
+        var par = answerList[i].split("|");
+        if(par[0] == "TP")tp.push(par[1]);
+        else if(par[0] == "FP")fp.push(par[1]);
+        else if(par[0] == "FN")fn.push(par[1]);
+        else if(par[0] == "TN")tn.push(par[1]);
+    }
+
+    var mode = document.getElementById('level').innerHTML;
+
+    var correctTP = [];
+    var correctFP = [];
+    var correctFN = [];
+    var correctTN = [];
+
+    var _tp = tp.sort();
+    var _fp = fp.sort();
+    var _fn = fn.sort();
+    var _tn = tn.sort();
+
+    if (mode==="LEVEL: EASY")
+    {
+        correctTP = ["node3", "node4", "node5", "node7"];
+        correctFP = ["node1", "node2", "node6", "node8"];
+        correctFN = [];
+        correctTN = [];
+    }
+    else if (mode==="LEVEL: MEDIUM")
+    {
+        correctTP = ["node4"];
+        correctFP = [];
+        correctFN = ["node3", "node5", "node7"];
+        correctTN = ["node1", "node2", "node6", "node8"];
+    }
+    else{
+        correctTP = ["node3", "node4", "node7"];
+        correctFP = [];
+        correctFN = ["node5"];
+        correctTN = ["node1", "node2", "node6", "node8"];
+    }
+
+    if (correctTP.length !== _tp.length) correct=false;
+    else if (correctFP.length !== _fp.length) correct=false;
+    else if (correctFN.length !== _fn.length) correct=false;
+    else if (correctTN.length !== _tn.length) correct=false;
+    else{
+
+        for (var i = 0; i < correctTP.length; i++) {
+            if (correctTP[i] !== _tp[i]) {
+                correct = false;
+            }
+        }
+    
+        for (var i = 0; i < correctFP.length; i++) {
+            if (correctFP[i] !== _fp[i]) {
+                correct = false;
+            }
+        }
+    
+        for (var i = 0; i < correctFN.length; i++) {
+            if (correctFN[i] !== _fn[i]) {
+                correct = false;
+            }
+        }
+    
+        for (var i = 0; i < correctTN.length; i++) {
+            if (correctTN[i] !== _tn[i]) {
+                correct = false;
+            }
+        }
+    }
+
+    if(correct)
+        document.getElementById('result').innerHTML = "Nice Job! All Correct.";
+    else
+        document.getElementById('result').innerHTML = "Sorry. Incorrect.";
 
 }
 
 function initDragDropScript()
 {
+    // change information in LEVEL heading
+    var l = document.getElementById("level");
+    l.innerHTML = localStorage.getItem("level");
+
+    // change text in algorithm accordingly
+    var alg = document.getElementById("algorithm");
+    alg.innerHTML = localStorage.getItem("algorithm");
+
     dragContentObj = document.getElementById('dragContent');
     dragDropIndicator = document.getElementById('dragDropIndicator');
     dragDropTopContainer = document.getElementById('dhtmlgoodies_dragDropContainer');
@@ -336,8 +439,6 @@ function initDragDropScript()
         indicateDestinationBox.id = 'indicateDestination';
         indicateDestinationBox.style.display='none';
         document.body.appendChild(indicateDestinationBox);
-
-
     }
 }
 

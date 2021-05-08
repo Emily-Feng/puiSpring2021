@@ -15,6 +15,8 @@
 
         <!-- External Links to CSS files -->
         <link rel="stylesheet" media="all" type="text/css" href="Assets/style.css">
+        <link rel="stylesheet" media="all" type="text/css" href="Assets/animations.css">
+        <script type="text/javascript" src="Assets/scripts.js"></script>
 
         <title>No Confusion Matrix</title>
     </head>
@@ -23,12 +25,12 @@
         <div class="container-fluid">
             <img src="Assets/images/gaming-background.jpeg">
             <div class="jumbotron jumbotron-fluid">
-                <h1 class="display-1">Play and Improve!</h1>
+                <h1 class="display-1 pulse">Play and Improve!</h1>
                
                 <div class="btn-group" id="gnav">
-                    <button class="nav-item mx-5"><a class="nav-link" href="game.html">EASY</a></button>
-                    <button class="nav-item mx-5"><a class="nav-link" href="game.html">Medium</a></button>
-                    <button class="nav-item mx-5"><a class="nav-link" href="game.html">HARD</a></button>
+                    <a class="btn btn-primary btn3d mx-5" href="game.html" onclick="levelEasy()">EASY</a>
+                    <a class="btn btn-primary btn3d mx-5" href="game.html" onclick="levelMedium()">Medium</a>
+                    <a class="btn btn-primary btn3d mx-5" href="game.html" onclick="levelHard()">HARD</a>
                 </div>
             </div> 
             
